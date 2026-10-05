@@ -1,0 +1,3 @@
+# Applied to the application directory when it must reside under the web root.
+Options -Indexes
+Require all denied

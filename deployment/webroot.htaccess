@@ -1,0 +1,23 @@
+# Compatible front-controller rules for common Apache shared hosting.
+# PHP limits intentionally are not set here: many FastCGI hosts reject php_value
+# directives and return HTTP 500. Set those limits in the hosting control panel.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<FilesMatch "\.(?:php[0-9]?|phtml|phps)$">
+    Require all denied
+</FilesMatch>
+
+<Files "index.php">
+    Require all granted
+</Files>

@@ -1,0 +1,62 @@
+change.log 1 May 2026
+Update versi CodeIgniter 4.7
+Menambahkan konfigurasi untuk memaksa penggunaan HTTPS pada app/Config/App.php
+Memperbaiki Insecure Access-Control-Allow-Origin pada app/Filters/Cors.php, 
+mengganti wildcard '*' dengan whitelist origin spesifik (Plugin ID: 98057)
+Memperbaiki Mixed Content pada cms/banner dan cms/berita, URL DataTables diubah ke URL relatif (Plugin ID: 98091)
+Update logic vulnerability Cross-Site Scripting (XSS) opac/browse (Plugin ID: 98104)
+Memperbaiki Input Reflection pada Opac/Controllers/Opac.php — validasi dan sanitasi parameter member_no, search, search_by
+Memperbaiki beberapa konfigurasi OAI-PMH Repository agar dinamis berdasarkan data yang ada di database
+Update jQuery ke versi 4.0.0
+Update Bootstrap ke versi 5.3.0
+Menambahkan fitur untuk mendapatkan jenis pelanggaran dan jenis denda pada modul pengembalian.
+Memperbaiki tampilan dan logic peminjaman dan pengembalian agar lebih  user-friendly dan sesuai dengan kebutuhan pengguna.
+Memperbaiki urutan tag form MARC agar ascending berdasarkan nomor tag
+Menammbahkan fitur perpanjangan peminjaman pada modul peminjaman.
+Memperbaiki bug pada modul edit anggota
+Memperbaiki bug pada modul browse di halaman frontend
+
+change.log 28 July 2026
+1. Menambahkan fitur export excel pada modul stockopname (Plugin ID: 98425)
+2. Memperbaiki logic rekap stock opname pada modul stockopname (Plugin ID: 98425)
+3. Memperbaiki fitur ubah lokasi,status dan aturan di detail stockopname, sekaang ketika dibah data juga mengubah data di tabel collections
+4. Memperbaiki fitur data table pada daftar katalog yang sudah distockopname di modul detail stockopname. Sebelumnya hanya tampil 25 rows saja
+5. Memperbaiki tampilan dan fitur modul daftar katalog yang belum distockopname di modul detail stockopname
+6. Menambahkan fitur export label punggung buku dengan pilihan export sebagai docs word
+7. Memperbaiki logic auto fill kolom nomor panggil di modul tambah katalog
+8. Menambahkan fitur auto fill kolom nomor panggil di modul edit katalog
+9. Menambahkan fitur penambahan record ke peminjaman ketika buku digital dibaca atau dipinjam secara digital
+10. Penyempurnaan logic fitur drm di konten digital
+11. Memperbaiki fitur kirim laporan di modul dashboard
+12. Perbaikan fitur laporan sirkulasi bagian filter peminjaman
+13. Perbaiki fitur perpanjangan anggota yang awalnya data list anggotanya tidak muncul
+14. Menambahkan inputan kolom tanggal di sirkulasi peminjaman agar bisa input data peminjaman di waktu Sebelumnya
+15. Menambahkan fitur kolom tanggal di sirkulasi pengembalian
+16. Memperbaiki logic cetak struk pengembalian dan kirim email bukti pengembalian
+17. Memperbaiki modul upload backgound kartu anggota yang sebelumnya tidak tersimpan di database
+18. Memperbaiki tampilan opac yang tampil dan tidak tampil ketika dipiliha tidak tampil di list katalog
+
+change.log 19 Agustus 2026
+1. Memperbaiki bug pada modul edit anggota yang sebelumnya tidak bisa menyimpan data foto anggota
+2. Melakukan hidden id anggota pada modul edit anggota agar tidak bisa diubah secara paksa dari url
+3. Menambahkan pilihan variasi cetak label mode a-4 yang sebelumnya hanya sampai a-6
+4. Melakukan update security pada modul auth registrasi user
+5. Menambahkan fitur pilih buku yang populer untuk ditampilkan di halaman opac
+6. Memperbaiki tampilan UI halaman detail opac agar lebih user friendly
+7. Memperbaiki tampilan UI halaman statistik agar lebih user friendly
+8. Menambahkan fitur filter berdasarkan lokaasi perpustakaan,lokasi ruang dan jenis fisik buku di modul eksemplar
+9. Menambahkan fitur buku populer,sering dibaca dan sering dipinjam di halaman opac
+10. Memperbaiki bug pada modul tambah nama sumber ketika menambahkan dan edit eksemplar
+11. Menambahkan fitur filter berdasarkan jenis bahan di opac
+12. Menambahkan filter eksemplar yang tampil berdasarkan lokasi perpustakaan yang diizinkan oleh user.
+13. Perbaikan bug di peminjaman mandiri dan pengembalian mandiri
+14. Membuat list tabel di eksemplar menjadi descending
+15. Memperbaiki bug di modul terbitan berkala dan memperbaiki tampilan konten digital artikel
+16. Menambahkan fitur Modul Artikel di halaman frontend
+17. Menyesuaikan fitur di list ekesmplar yag ada di slug katalog dengan eksemplar yang ada di daftra eksemplar utama
+18. Memperbaiki bug inputan tanggal peminjaman dan pengembalian yang bisa di hari setelah tanggal hari ini
+19. Menambahkan filter Jenis Bahan di halaman list katalog
+20. Menambahkan tampilan jam layanan di footer halaman frontend
+21. Menambahkan filter kelas dan update bacth kelas untuk perpustakaan sekolah
+22. Menambahakan filter fakultas dan jurusan untuk perpustakaan perguruan Tinggi
+
